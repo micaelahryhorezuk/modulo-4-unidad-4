@@ -1,0 +1,13 @@
+<h1>{{title}}</h1>
+
+{{#if loggedIn}}
+    <p>Bienvenido {{username}} <a href="/logout">Sair</a></p>
+{{/if}}
+
+{{#unless loggedIn}}
+<p>Hola! Inicia sesion!</p>
+<form action="/login" method="post">
+    <input type="text" name="username"/>
+    <button>Ingresar</button>
+</form>
+{{/unless}}
